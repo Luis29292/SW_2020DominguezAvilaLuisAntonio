@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="esp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>7</title>
+  </head>
+  <body>
+    <form action="../dynamics/validación.php" method="post">
+      <select name="Tipo">
+        <option value="P">Profesor</option>
+        <option value="F">Funcionario</option>
+      </select><br>
+      Nombre(s): <input type="text" name="Nombre" pattern="([A-ZÁÉÍÓÚÑ][a-záéíóúñ]*\s?){1,}" required><br>
+      Apellido Paterno: <input type="text" name="aP" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required><br>
+      Apellido Materno: <input type="text" name="aM" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required><br>
+      Fecha de nacimiento: <input type="date" name="nac" ><br>
+      Colegio: <select name="Colegio">
+        <optgroup label="Área I">
+          <option value="Fis">Física</option>
+          <option value="Info">Informática</option>
+          <option value="Mate">Matemáticas</option>
+        </optgroup>
+        <optgroup label="Área II">
+          <option value="Bio">Biología</option>
+          <option value="EF">Educación Física</option>
+          <option value="MFS">Morfología, Fisiología y Salud</option>
+          <option value="OE">Orientación Educativa</option>
+          <option value="PHm">Psicología e Higiene Mental</option>
+          <option value="Quim">Química</option>
+        </optgroup>
+        <optgroup label="Área III">
+          <option value="CS">Ciencias Sociales</option>
+          <option value="G">Geografía</option>
+          <option value="His">Historia</option>
+        </optgroup>
+        <optgroup label="Área IV">
+          <option value="Al">Alemán</option>
+          <option value="AP">Artes Plásticas</option>
+          <option value="Dan">Danza</option>
+          <option value="DM">Dibujo y Modelado</option>
+          <option value="FIL">Filosofía</option>
+          <option value="FRAN">Francés</option>
+          <option value="EN">Inglés</option>
+          <option value="ITA">Italiano</option>
+          <option value="LC">Letras Clásicas</option>
+          <option value="Li">Literatura</option>
+          <option value="Mus">Música</option>
+          <option value="TEA">Teatro</option>
+        </optgroup>
+      </select><br>
+      Nombre de Usuario: <input type="text" name="RFC" placeholder="RFC" pattern="[A-Z]{4}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])([0-9]|[A-Z]){3}" required><br>
+      Contraseña: <input type="password" name="contra" required><br>
+      <input type="submit" value="Validar">
+    </form>
+  </body>
+</html>
