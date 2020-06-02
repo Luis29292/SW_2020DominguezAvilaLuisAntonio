@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="esp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cifrado</title>
+  </head>
+  <body>
+    <form action="../dynamics/cifrar.php" method="post">
+      Texto: <input type="text" name="texto"><br>
+      Llave: <input type="number" name="key" pattern="^([^0][0-9]*)+" title="Introduce un número mayor a cero" required><br>
+      <input type="submit" name="E" value="Encriptar"><br>
+      <input type="submit" name="E" value="Descifrar"><br>
+    </form>
+  </body>
+</html>
