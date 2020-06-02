@@ -1,6 +1,6 @@
 <?php
-  $abc=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W",
-  "X","Y","Z",".",",","¿","?"];//Arreglo con todas las letras
+  $abc=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W",
+  "X","Y","Z",".",",","?"];//Arreglo con todas las letras
   $sum=3;//El número del cifrado César
   for ($i=0; $i<$sum; $i++)
   {
@@ -8,7 +8,9 @@
   }
   $pal=$_POST['Nombre'];//Recibe el input
   $pal=strtoupper($pal);//Hace mayúsculas todas las letras del texto
-  $pal=str_replace("ñ","Ñ",$pal);//Convierte a la ñ en mayúscula
+  $pal=str_replace("ñ","N",$pal);
+  $pal=str_replace("Ñ","N",$pal);
+  $pal=str_replace("¿","?",$pal);
   for ($i=0; $i<strlen($pal); $i++)//Recorre cada letra del input
   {
     foreach ($abc as $key => $value) {//Recorre cada letra del abecedario
